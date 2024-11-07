@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node dist/app.js",
+    "build": "npx tsc build",
+    "dev": "npx ts-node-dev app.ts"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -30,6 +31,8 @@
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.9.0",
     "@types/typescript": "^2.0.0",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.6.3"
   },
   "author": "fahmialfareza <fahmialfareza@icloud.com>",
