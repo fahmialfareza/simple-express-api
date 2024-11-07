@@ -1,19 +1,20 @@
-const express = require("express");
+import express from "express";
+
 const app = express();
 
 // Setup Middleware
 require("./middleware/express-middleware")(app);
 const {
-	checkTokenSetUser,
-	isLoggedIn,
+  checkTokenSetUser,
+  isLoggedIn,
 } = require("./middleware/auth-middleware");
 app.use(checkTokenSetUser);
 
 // Get Root
 app.get("/", (req, res) => {
-	res.json({
-		message: "Welcome To The API 🚀",
-	});
+  res.json({
+    message: "Welcome To The API 🚀",
+  });
 });
 
 // Initial Router
@@ -29,7 +30,7 @@ app.use(errorHandler);
 // Server Listening
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-	console.log(`Server run listening on ${port}`);
+  console.log(`Server run listening on ${port}`);
 });
 
 module.exports = app;

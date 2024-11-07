@@ -1,8 +1,9 @@
-const db = require("./connection");
+import db from "./connection";
 
 // Collection Users
 const users = db.get("users");
 // Create Index email & username
+// @ts-ignore
 users.createIndex(["email", "username"], { unique: true });
 
-module.exports = users;
+export default users;
