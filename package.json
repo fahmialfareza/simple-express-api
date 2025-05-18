@@ -38,5 +38,9 @@
   "author": "fahmialfareza <fahmialfareza@icloud.com>",
   "license": "MIT",
   "keywords": [],
-  "description": ""
+  "description": "",
+  "volta": {
+    "node": "18.16.0",
+    "pnpm": "8.6.0"
+  }
 }
